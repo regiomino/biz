@@ -1,0 +1,111 @@
+/* Leave space for the fixed navigation above first item */
+body {
+    padding-left: 260px;
+    font-family : "Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    @include transition(color .3s ease);
+}
+
+.section {
+    @include box-shadow(rgba($black, 0.9) 0 0px 13px 0 );
+}
+
+// Typo
+
+p,
+ul {
+    font-family: 'Roboto', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    color: $paragraph-black;
+    
+    strong{
+        font-family: 'Roboto', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-weight: bold;
+    }
+}
+		 
+h1 {
+    font-weight: bold;
+    font-family: 'Dosis' sans-serif;
+}
+
+h1 {
+    font-size: 60px;	
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+h3 {
+    font-size: 37px;
+    font-weight: 200;
+    line-height: 1.2em;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.2em;
+}
+
+h5 {
+    font-size: 14px;
+}
+		.subtitle h2 {
+		font-size: 12px;
+		padding: 0;
+		margin: 0 0 25px;
+		line-height: 12px;
+		}
+		.title, .subtitle {
+		text-align: center;
+		}
+		.title {
+		padding: 106px 0 0;
+               
+		}
+                
+ // Separator & Bullets              
+.line {
+    width: 300px;
+    height: 1px;
+    text-align: center;
+    line-height: 0;
+    display: inline-block;
+    background: #CACACA;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.circle.small {
+    display: inline-block;
+    margin-top: -5px;
+    width: 10px;
+    height: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #CACACA;
+    background: #FFFFFF;
+}
+
+.triangle {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    -webkit-transform:rotate(360deg);
+    border-style: inset;
+}
+.column-wrapper {
+    padding: 66px 0 56px;
+    text-align: center;
+}

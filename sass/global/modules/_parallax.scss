@@ -1,0 +1,24 @@
+/*** TARA IMAGE BACKGROUND MODULE ***/
+
+.image-holder {
+    height: 278px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    overflow: hidden;
+    
+    &.start {
+        height: 688px;
+    }
+}
+
+
+	 
+#parallax1 {
+    background-image: url('../images/start.jpg');
+}
+
+#parallax2 {
+    background-image: url('../images/start.jpg');
+} 

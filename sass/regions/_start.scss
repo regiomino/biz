@@ -1,0 +1,98 @@
+#start {
+     background: url('../images/main.jpg') center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    
+    h1.well-hello {
+        color: #FFF;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 100px;
+        font-weight: 700;
+        line-height: 90px;
+         padding-top: 15%;
+    }
+    
+     .animated { 
+                -webkit-animation-duration: 2s; 
+                animation-duration: 2s; 
+                -webkit-animation-fill-mode: both; 
+                animation-fill-mode: both; 
+                -webkit-animation-timing-function: ease-in; 
+                animation-timing-function: ease-in; 
+                animation-iteration-count:infinite; 
+                -webkit-animation-iteration-count:infinite; 
+            } 
+
+            @-webkit-keyframes bounce { 
+                0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+                40% {-webkit-transform: translateY(-30px);} 
+                60% {-webkit-transform: translateY(-15px);} 
+            } 
+
+            @keyframes bounce { 
+                0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+                40% {transform: translateY(-30px);} 
+                60% {transform: translateY(-15px);} 
+            } 
+
+            .bounce { 
+                -webkit-animation-name: bounce; 
+                animation-name: bounce; 
+            }
+    
+    .scroll-down {
+        width: 150px;
+        text-align: center;
+        height: 150px;
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        margin-left: -75px;
+         
+        .text {
+           display: inline-block;
+           color: $white;
+           font-weight: 700;
+           font-size: 16px;
+           margin-bottom: 17px;
+           background-color: rgba(0, 0, 0, 0.2);
+           padding: 3px 11px 3px 11px;
+           @include border-radius(3px);
+        }
+        
+        .circle-button {
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            display: inline-block;
+            background-color: $white;
+            @include border-radius(50px);
+            position: relative;
+            @include box-shadow(rgba($white, 0.3) 0 0px 0px 8px);
+            
+           
+            
+            &:before {
+                font-family: 'biz-icons';
+                font-size: 50px;
+                color: $brand-green;
+                content: "\e60c";
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                left: 50%;
+                top: 50%;
+                margin-left: -25px;
+                margin-top: -22px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,116 @@
+/**********************************
+ * Colors
+ *********************************/
+
+/*
+ * General
+ */
+
+$white: #ffffff;
+$black: #000000;
+
+/*
+ * Brand
+*/
+
+$brand-red : #bc0825;
+$brand-red-lighter: #c40827;
+$brand-green: #95bc0d;
+$brand-green-lighter: #9dc40e;
+
+/*
+ * Structure
+ */
+
+$header-black: #444444;
+
+$box-border-grey: #E7E7E7;
+
+$dashed-separator-grey: #C5C5C5;
+
+$separator-grey: #dbdbdb;
+$separator-white: #5f5f5c;
+
+$popup-tabs-background :#fcfcfc;
+
+$search-form-boxshadow: #f4f4f4;
+
+$light-grey-hover: #F9F9F9;
+$grey-hover: #F7F7F7;
+
+$mainNav-border: #d9d9d9;
+$mainNav-gradient-start: #fbfbfb;
+$mainNav-gradient-end: #f3f3f3;     
+$mainNav-boxshadow: #E9E9E9;
+$mainNav-separator-white: #ffffff;
+$mainNav-separator-grey: #d9d9d9;
+
+$date-background : #f2f2f2;
+
+/*
+ * Discount Bar
+ */
+
+$discountbar-grey: #d2c8bf;
+$discountbar-gradient-start: #d0e28a;
+$discountbar-gradient-end: #9fc70e;
+$discountbar-insettopshadow: #b6d453;
+$discountbarpointer-border: #829d37;
+$discountbarpointer-insettopshadow: #C7F02E;
+/*
+ * Buttons
+ */
+
+$red-button-gradient-start:#d1082a;
+$red-button-gradient-end:#bc0825;
+$red-button-text-shadow :#9a061f;
+$button-white: #fcfcfc;
+
+$green-button-gradient-start:#9dc40e;
+$green-button-gradient-end:#95bc0d;
+$green-button-text-shadow: #8eaa35;
+$sb-padding:  11px 20px;
+
+/*
+ * Typo
+ */
+
+$topmenu-white-light: #e0e0e0;
+$heading-black: #555555;
+$paragraph-black: #666666;
+$paragraph-black-light: #878787;
+$footer-heading-white: #eeeeee;
+$footer-list-grey: #B0B0B0;
+$light-grey-hover: #f7f7f7;
+$placeholder-grey: #cccccc;
+ 
+/*
+ * Misc
+ */
+
+$facebook: #3b5998;
+$xing: #cdd60f;
+
+
+/**********************************
+ * Typography
+ *********************************/
+$nav-font-size: 12px;
+$tooltip-category-font-size: 12px;
+$form-font-size: 12px;
+$base-font-size: 13px;
+$base-line-height:  20px;
+
+$h1-size: 33px;
+$h2-size: 18px;
+$h3-size: 16px;
+
+$complementary-small: 11px; // z.B. Größe des Login-Menüs
+
+
+
+/**********************************
+ * Config
+ *********************************/
+
+$legacy-support-for-ie8: true;

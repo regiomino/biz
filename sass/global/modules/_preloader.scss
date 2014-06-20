@@ -1,0 +1,47 @@
+#preload {
+    display: block;
+    background: transparent;
+    overflow-x: auto;
+    overflow-y: scroll;
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
+    z-index: 8000;
+         
+    #progressbar {
+        position: fixed;
+        top: 50%;
+        height: 4px;
+        transition: opacity 300ms ease;
+        background-color: $brand-green;
+        &.hide {
+	    opacity: 0;
+	}
+    }
+    
+    .fill {
+        width: 100%;
+        height: 50%;
+        background: #000000;
+        position: absolute;
+        left: 0;
+        transition: top 1200ms ease, bottom 1200ms ease;
+    }  
+    	
+    .fill.up {
+        top: 0;
+    }
+    
+   .fill.down {
+        bottom: 0;
+    }
+    .fill.up.hide {
+        top: -100%;
+   }
+   
+    .fill.down.hide {
+        bottom: -100%;
+   }
+}

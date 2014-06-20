@@ -1,0 +1,91 @@
+#regiomino {
+    
+    .column-wrapper .columns {
+        margin: 0 20px;
+    }
+    
+    .column-wrapper h2 {
+        font-size: 28px;
+        line-height: 28px;
+        font-weight: bold;
+        padding: 32px 0 0 0;
+        color: $heading-black;
+    }
+    
+    .column-wrapper p {
+        text-align: center;
+        padding: 16px 0 0;
+        color: $paragraph-black;
+        line-height: 21px;
+    }
+    
+    .service-icon .circle.outer {
+        border-width: 3px;
+        border-style: solid;
+        width: 90px;
+        height: 90px;
+        margin: 0 auto;
+        overflow: hidden;
+        padding: 5px;
+        position: relative;
+    }
+    
+    .service-icon .triangle {
+        border-width: 9px 8.5px 0 8.5px;
+        margin: -1px auto 0;
+        border-style: solid;
+    }
+    
+    span.service-icon-holder {
+        width: 45px;
+        height: 90px;
+        transition: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transition: all 0.2s ease;
+        -ms-transition: all 0.2s ease;
+        display: block;
+        position: absolute;
+        transform: rotate(30deg);
+        -ms-transform: rotate(30deg); 
+        -webkit-transform: rotate(30deg);
+    }
+    
+    .service-icon .circle.outer:hover .service-icon-holder.left, .service-icon .circle.outer.infocus .service-icon-holder.left {
+        left: 9px;
+    }
+    .service-icon .circle.outer:hover .service-icon-holder.right, .service-icon .circle.outer.infocus .service-icon-holder.right {
+        right: 8px;
+    }
+
+    .service-icon-holder.semicircle.left {
+        border-radius: 90px 0 0 90px;
+-moz-border-radius: 90px 0 0 90px;
+-webkit-border-radius: 90px 0 0 90px;
+left: -50px;
+top: -6px;
+    }
+    .service-icon-holder.semicircle.right {
+        border-radius: 0 90px 90px 0;
+-moz-border-radius: 0 90px 90px 0;
+-webkit-border-radius: 0 90px 90px 0;
+right: -50px;
+top: 16px;
+    }
+    .theicon {
+        height: 100%;
+        line-height: 112px;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        z-index: 10;
+    }
+    
+    .service-icon .circle.outer {
+	border-color: $heading-black;
+	}
+	.service-icon .triangle {
+	border-color: $heading-black transparent transparent;
+	}
+    
+}

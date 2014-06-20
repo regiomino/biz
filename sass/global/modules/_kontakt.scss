@@ -1,0 +1,203 @@
+#contact {
+    
+    .form-wrapper,
+    .contact-info {
+        padding: 94px 0 70px;
+    }
+    
+    .form-wrapper {
+        
+        .formrow {
+            position: relative;
+            
+            input[type="text"],
+            input[type="password"],
+            input[type="email"],
+            textarea {
+                font-family: 'Roboto', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+                width: 366px;
+		max-width: 100%;
+                display: block;
+                color: $paragraph-black;
+                font-size: 14px;
+                border:1px solid $separator-grey;
+		padding: 25px 20px;
+                background: $white;
+                margin-bottom: 5px;
+                @include border-radius(2px);
+                @include transition(all .3s linear);
+                
+                &:hover {
+                    border: 1px solid  shade($separator-grey, 10%);
+                }
+                
+                &:focus {
+                    outline: none;
+                    border: 1px solid  shade($separator-grey, 25%);
+                }
+            }
+                
+            .error,
+            .okay,
+            .loader {
+                width: 24px;
+                height: 24px;
+                margin: 0 4px;
+                position: absolute;
+                top: 26px;
+                right: 16px;
+                z-index: 1;
+                opacity: 0;
+                
+                &.active {
+                    opacity: 1;
+                }
+            }
+            
+            .error:before,
+            .okay:before {
+                font-family: 'biz-icons';
+                font-size: 24px;
+            }
+                
+            .error:before {
+                content: "\f00d";
+                color  : $brand-red;
+            }
+            
+            .okay:before  {
+                content: "\f00c";
+                color  : $brand-green;
+            }
+            
+            .loader {
+                background-image: url("../images/loader.gif");
+            }
+                
+            textarea {
+                min-height: 146px; 
+            }
+            
+            input.button {
+                @include sassy-button("simple", 4px, 13px, $green-button-gradient-start, $green-button-gradient-end, $button-white, "none");
+                margin-top: 20px;
+                font-weight: 700;
+                font-size: 16px;
+                @include text-shadow($green-button-text-shadow 1px 1px 0);
+                outline: none;
+            }
+        }
+    }
+    
+    .contact-info {
+       
+        width: 508px;
+        
+        p {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        
+        .address-row {
+            clear: both;
+            overflow: hidden;
+            padding-left: 29px;
+            position: relative;
+            
+            &:before {
+                font-family: 'biz-icons';
+                color: #A3A3A3;
+                font-size: 19px;
+                position: absolute;
+                left: 0;
+                top: 2px;
+            }
+            
+            &.address:before {
+                content: "\f041";
+            }
+            
+            &.mail:before {
+                content: "\f003";
+                font-size: 16px;
+            }
+            
+            &.phone:before {
+                content: "\f095";
+                font-size: 17px;
+            }
+        }
+        
+        h4 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 0;
+            color: $paragraph-black;
+            margin-bottom: 10px;
+        }
+        
+        .contact-separator {
+            margin: 14px 0 16px;
+            width: 100px;
+            height: 1px;
+            background-color: #CACACA;
+        }
+        
+        a {
+            color: $paragraph-black;
+            
+            &:hover,
+            &:focus {
+                color: $brand-green;
+            }
+        }
+        
+        ul.socials {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            
+            li {
+                margin-bottom: 5px;
+                
+                a {
+                    padding: 0 5px 0 23px;
+                    display: inline-block;
+                    position: relative;
+                    
+                    &:before {
+                        font-family: "biz-icons";
+                        position: absolute;
+                        font-size: 16px;
+                        color: #A3A3A3;
+                        left: 0px;
+                        top: 2px;
+                    }
+                    
+                    
+                    &.facebook:before {
+                        content : "\f082";
+                    }
+                    
+                     &.xing:before {
+                        content : "\f169";
+                    }
+                    
+                }
+            }
+        }
+        
+        .contact-footer {
+            padding: 66px 0;
+            
+            img {
+                float: left;
+            }
+            
+            p {
+                padding: 17px 0 0 128px;
+            }
+        }
+    }
+
+}

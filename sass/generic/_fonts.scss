@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis:600,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,700);
+@import url(https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here);
+/*font-family: 'Just Me Again Down Here', cursive;*/
+@font-face {
+	font-family: 'icons';
+	src:url('../fonts/icons/icons.eot?-wbi25l');
+	src:url('../fonts/icons/icons.eot?#iefix-wbi25l') format('embedded-opentype'),
+		url('../fonts/icons/icons.woff?-wbi25l') format('woff'),
+		url('../fonts/icons/icons.ttf?-wbi25l') format('truetype'),
+		url('../fonts/icons/icons.svg?-wbi25l#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'food-icons';
+	src:url('../fonts/foodicons/food-icons.eot?259rcy');
+	src:url('../fonts/foodicons/food-icons.eot?#iefix259rcy') format('embedded-opentype'),
+		url('../fonts/foodicons/food-icons.woff?259rcy') format('woff'),
+		url('../fonts/foodicons/food-icons.ttf?259rcy') format('truetype'),
+		url('../fonts/foodicons/food-icons.svg?259rcy#food-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'biz-icons';
+	src:url('../fonts/biz/biz-icons.eot?259rcy');
+	src:url('../fonts/biz/biz-icons.eot?#iefix259rcy') format('embedded-opentype'),
+		url('../fonts/biz/biz-icons.woff?259rcy') format('woff'),
+		url('../fonts/biz/biz-icons.ttf?259rcy') format('truetype'),
+		url('../fonts/biz/biz-icons.svg?259rcy#food-icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

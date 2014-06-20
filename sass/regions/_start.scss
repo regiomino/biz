@@ -15,7 +15,11 @@
         font-size: 100px;
         font-weight: 700;
         line-height: 90px;
-         padding-top: 15%;
+         
+         position: absolute;
+         width: 100%;
+         top: 50%;
+         
     }
     
      .animated { 
@@ -61,10 +65,23 @@
            color: $white;
            font-weight: 700;
            font-size: 16px;
-           margin-bottom: 17px;
-           background-color: rgba(0, 0, 0, 0.2);
+           margin-bottom: 27px;
+           background-color: rgba(0, 0, 0, 0.4);
            padding: 3px 11px 3px 11px;
            @include border-radius(3px);
+           
+           &:after {
+            position: absolute;
+            top: 27px;
+            left: 50%;
+            margin-left: -8px;
+            width: 0; 
+            height: 0;
+            content: "";
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 8px solid rgba(0, 0, 0, 0.4);
+           }
         }
         
         .circle-button {
@@ -75,9 +92,13 @@
             background-color: $white;
             @include border-radius(50px);
             position: relative;
-            @include box-shadow(rgba($white, 0.3) 0 0px 0px 8px);
+            @include box-shadow(rgba($white, 0.3) 0 0px 0px 7px);
+            @include transition(background-color .3s ease);
             
-           
+            &:hover,
+            &:focus {
+                background-color: shade($white, 6%);
+            }
             
             &:before {
                 font-family: 'biz-icons';

@@ -1,33 +1,13 @@
-var tj=jQuery;
-tj.noConflict();
-
-
-if ( Modernizr.csstransitions ) {
-	var im = tj('img').length;
-	var step = 100 / (im / 3);
-	var g = 0;
-	tj('img').each( function() {
-		"use strict";
-		tj(this).imagesLoaded( function() {
-			g++;
-			tj('#progressbar').animate({ width : step*g+'%' },10, function() {
-				if ( tj(this).width() >= tj(window).width() ) {
-					tj('#progressbar, .fill').addClass('hide');
-					// all images loaded
-					 
-					tj('#preload').fadeOut( 1200 );
-				}
-			});
-		});
-	});
-}
-
-
 (function($,win) {
     
     var $startSection = $('#start'),
         $navigation = $('ul.nav');
         
+    $(win).on('scroll', function(){
+        var scrollTop = $(win).scrollTop();
+        console.info(scrollTop);
+       
+    });
     //Stage Resize
     
     $(win).on('resize.stage', function(){
@@ -55,7 +35,7 @@ if ( Modernizr.csstransitions ) {
             var $el = $(this),
                 id = $(this).attr('id'),
                 $activeAnchor = $navigation.find('a[href="#'+ id +'"]');
-                
+                 
             $navigation.find('li').removeClass('active');
             $activeAnchor.parent().addClass('active');
         }
@@ -63,8 +43,25 @@ if ( Modernizr.csstransitions ) {
     
     //Start Loading
     
-   
- 
+    if ( Modernizr.csstransitions ) {
+	var im = $('img').length;
+	var g = 0;
+	$('img').each( function() {
+             
+		"use strict";
+		$(this).imagesLoaded( function() {
+			g++;
+                        var z = (g * 100) /im;
+			$('#progressbar').animate({ width : z+'%' },100, function() {
+				if ( $(this).width() >= $(win).width() ) {
+					$('#progressbar, .fill').addClass('hide');
+					// all images loaded
+					$('#preload').fadeOut( 1200 );
+				}
+			});
+		});
+	});
+    }
     
     //About us Carousel
     
@@ -169,6 +166,12 @@ if ( Modernizr.csstransitions ) {
 			}
     });
     
+    $('body').wrapInner('<div id="skrollr-body" />');
+        var s = skrollr.init({
+                // edgeStrategy: 'set',
+                forceHeight : false,
+                easing: 'outCubic'
+    });
 	 
     
 })(jQuery, window);

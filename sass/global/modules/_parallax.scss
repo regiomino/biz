@@ -1,24 +1,97 @@
 /*** TARA IMAGE BACKGROUND MODULE ***/
 
 .image-holder {
-    height: 278px;
+    height: 440px;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
     overflow: hidden;
+    position: relative;
+    z-index: 10;
     
     &.start {
-        height: 688px;
+        min-height: 688px;
+    }
+    
+    
+    .parallax-content {
+            padding-top: 60px;
+            
+            h1 {
+                font-size: 32px;
+                color: $white;
+            }
     }
 }
 
 
 	 
 #parallax1 {
-    background-image: url('../images/start.jpg');
+    background-image: url('../images/parallax/1.jpg');
+    
+        
+
+    
+    .partnerOuter {
+        text-align: center;
+    }
+    
+    
+    div.partner-wrapper {
+          display: inline-block;
+        
+        a {
+            display: block;
+            width: 190px;
+            height: 109px;
+            line-height: 109px;
+            text-align: center;
+            background-color: #FFF;
+            opacity: 0.7;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
 }
 
 #parallax2 {
-    background-image: url('../images/start.jpg');
-} 
+    background-image: url('../images/parallax/2.jpg');
+    
+    .quote-wrapper {
+        
+        .quote {
+            font-family: 'Dosis';
+            color: $white;
+            font-size: 46px;
+            font-weight: 700;
+            
+            
+            .author {
+                display: block;
+                font-size:20px;
+                text-transform: uppercase;
+            }
+            
+            &.right-align {
+                text-align: right;
+            }
+            
+            &.left-align {
+                text-align: left;
+            }
+            
+        }
+       
+    }
+    
+}
+
+#parallax3 {
+    background-image: url('../images/parallax/3.jpg');
+    
+}

@@ -3,6 +3,7 @@
 .navbar {
     width: 260px;
     height: 82px;
+    padding-top: 105px;
     top: 0;
     left: 0;
     height: 100%;
@@ -11,19 +12,6 @@
     @include box-sizing (border-box);
     @include box-shadow(rgba($black, 0.35) -28px 0px 22px -20px inset);
    
-    .logo {
-        margin-left: 25px; 
-        padding: 0;
-        line-height: 108px;
-        
-        
-        a#logo {
-            display: inline-block;
-            height: 100%;
-            position: relative;
-            width: 100%;
-	}
-    }
     
     ul.nav {
         padding: 0px;
@@ -31,27 +19,26 @@
         
         li {
             display: block;
-            padding: 8px 25px;
-            font-family : 'Roboto', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
             
+            font-family : 'Roboto', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+           
             a {
                 text-decoration: none;
                 font-size: 14px;
                 font-weight: 700;
-                color : #979797;
+                color : #818181;
+                padding: 8px 25px;
                 display: block;
                 @include transition(color .300s ease);
                
                 &:hover,
                 &:focus {
                     color: $white;
+                     background-color: #272727;
                    
                 }
             }
-            &:hover,
-            &:focus {
-                background-color: #272727;
-            }
+            
         
             &.active {
                 background-color: #272727;

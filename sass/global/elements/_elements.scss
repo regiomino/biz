@@ -13,6 +13,8 @@ a {
 
 .section {
     @include box-shadow(rgba($black, 0.9) 0 0px 13px 0 );
+    position: relative;
+    z-index: 20;
 }
 
 // Typo

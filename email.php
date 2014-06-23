@@ -20,7 +20,7 @@ $mail->SMTPAuth = true;    								 // turn on SMTP authentication
 $mail->Port     = 587;  
 
 $mail->Username = "support@regiomino.de"; 			     // SMTP username
-$mail->Password = "R3g10m1n0$";							 // SMTP password
+$mail->Password = "5j6M9NajRE56Jqb2C-45eQ";							 // SMTP password
 
 
 

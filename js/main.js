@@ -166,6 +166,17 @@
 			}
     });
     
+    $('html').niceScroll({
+		cursorcolor:"#95BC0D",
+		background: "#111111",
+		cursorborder:"#95BC0D",
+		cursoropacitymin : 1,
+		cursorwidth : 20,
+		cursorborderradius :0,
+                zindex : '1000'
+	});
+    
+    
     $('body').wrapInner('<div id="skrollr-body" />');
         var s = skrollr.init({
                 // edgeStrategy: 'set',

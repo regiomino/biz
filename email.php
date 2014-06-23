@@ -1,49 +1,46 @@
 <?php
- 
-// THE EMAIL ADDRESS WHERE YOU WANT TO SEND
-$email = 'juscheele@gmail.com';
-// THE EMAIL SUBJECT
-$subject = 'Neue Nachricht über regiomino.biz';
 
-$yn = $_POST['yourname'];
-$em = $_POST['email'];
-$ta = $_POST['message'];
+require("class.phpmailer.php");
 
-if ( $yn == '' ) { 
-	die('yourname');
-}
-include_once('functions.php');
-if ( !check_email_address($em) ) {
-	die('email');
-}
-if ( $ta == '' ) {
-	die('message');
-}
-$message = '
-<html>
-<head>
-	<title>Message from Contact Form</title>
-</head>
-<body>
-	<h2>Hello,</h2>
-	<h2>'.$subject.'</h2>
-	<p>Name: '.$yn.'</p>
-	<p>Email: '.$em.'</p>
-	<p>Message: </p>
-	<p>'.$ta.'</p>
-</body>
-</html>
-';
+//sumbission data
+$ipaddress = $_SERVER['REMOTE_ADDR'];
+$date = date('d/m/Y');
+$time = date('H:i:s');
 
-$headers  = 'MIME-Version: 1.0' . "\r\n";
-$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-$headers .= 'To: '.$email. "\r\n";
-$headers .= 'From: '.$yn.' <'.$em.'>' . "\r\n";
- 
- 
-if ( @mail($yn, $subject, $message, $headers) ) {
-	echo 'sent';
-} else {
-	echo 'name';
-} 
+//form data
+$name = $_POST['yourname'];	
+$email = $_POST['email'];
+$message = $_POST['message'];
+
+$mail = new PHPMailer();
+
+$mail->IsSMTP();                                 		 // send via SMTP
+$mail->Host     = "smtp.mandrillapp.com"; 					 // SMTP server
+$mail->SMTPAuth = true;    								 // turn on SMTP authentication
+$mail->Port     = 587;  
+
+$mail->Username = "support@regiomino.de"; 			     // SMTP username
+$mail->Password = "R3g10m1n0$";							 // SMTP password
+
+
+
+$mail->From     = "support@regiomino.de";				 // SMTP username
+$mail->AddAddress("support@regiomino.de");			  	 // Your Adress
+$mail->Subject  =  "regiomino.biz Kontaktformularanfrage!";
+$mail->IsHTML(true);  
+$mail->CharSet = 'UTF-8';
+$mail->Body     =  "<p><strong>Name: </strong> {$name} </p>
+					  <p><strong>Email Adresse: </strong> {$email} </p>
+					  <p><strong>Nachricht: </strong> {$message} </p>
+					  <p>Diese Nachricht wurde gesendet von: {$ipaddress} on {$date} at {$time}</p>";
+
+if(!$mail->Send())
+{
+   echo "Mail Not Sent ";
+   echo "Mailer Error: " . $mail->ErrorInfo;
+   exit;
+}
+
+echo "Mail Sent";
+
 ?>

@@ -16,9 +16,22 @@
         font-weight: 700;
         line-height: 90px;
          
-         position: absolute;
-         width: 100%;
+         position: fixed;
+         width: 781px;
+         left:50%;
+         margin-left: -259px;
+         margin-top: -12%;
          top: 50%;
+         
+         @include bp(1089px) {
+           font-size: 70px;
+           line-height: 70px;
+        }
+        
+        @include bp(856px) {
+           font-size: 54px;
+           line-height: 56px;
+        }
          
     }
     

@@ -18,140 +18,14 @@
         border-bottom: $size solid $color;
 }
 
-/*
- * font-face
- */
 
-@mixin icon-font($content, $size,$color) {
-    font-family: 'icons';
-    
-    @if $content == none {
-          
-    }  @else {
-        content: $content;
-    }
-    color: $color;
-    font-size: $size;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+ 
+
+
+@mixin bp($size) {
+     
+    @media only screen and (max-width: $size) { @content; }
 }
-
-/*
- * vertical center
- */
-
-@mixin vertical-center() {
-    display: table-cell;
-    vertical-align: middle;
-    margin-top: inherit;
-    *clear: expression(style.marginTop = "" + (offsetHeight < parentNode.offsetHeight ? parseInt((parentNode.offsetHeight - offsetHeight) / 2) + "px" : "0"),     style.clear = "none", 0     );
-}
-
-/*
- * center-x-y
- */
-
-@mixin center-x-y($nmargin-left,$nmargin-top) {
-     position: absolute;
-     left: 50%;
-     top: 50%;
-     margin-left: $nmargin-left;
-     margin-top: $nmargin-top;
-}
-
-@mixin center-x-y-fix($nmargin-left,$nmargin-top) {
-     position: fixed;
-     left: 50%;
-     top: 50%;
-     margin-left: $nmargin-left;
-     margin-top: $nmargin-top;
-}
-
-@mixin content-box () {
-    background: $white;
-    padding: 20px;
-    border: 1px solid $box-border-grey;
-}
-/*
- * media queries
- */
-
-$mobile-p : 479px;
-$mobile-ls : 480px;
-$tablet-p : 768px;
-$desktop : 960px;
-$desktop-large : 1120px;
-
-@mixin bp($canvas) {
     
-    // Range breakpoints
-    @if $canvas == mobile-p {
-        @media only screen and (min-width: 0) and (max-width: $mobile-ls - 1) { @content; }
-    }
-    
-    @else if $canvas == mobile-ls {
-        @media only screen and (min-width: $mobile-ls) and (max-width: $tablet-p - 1) { @content; }
-    }
-    
-    @else if $canvas == tablet-p {
-        @media only screen and (min-width: $tablet-p) and (max-width: $desktop - 1) { @content; }
-    }
-    
-    @else if $canvas == desktop {
-        @media only screen and (min-width: $desktop) and (max-width: $desktop-large - 1) { @content; }
-    }
-    
-    @else if $canvas == desktop-large {
-        @media only screen and (min-width: $desktop-large) { @content; }
-    }
-    
-    // alles kleiner als...
-    
-    @else if $canvas == mobile-p-neg {
-         @media only screen and (max-width: $mobile-p) { @content; }
-    }
-    
-    @else if $canvas == mobile-ls-neg {
-         @media only screen and (max-width: $mobile-ls - 1) { @content; }
-    }
-    
-    @else if $canvas == tablet-p-neg {
-         @media only screen and (max-width: $tablet-p - 1) { @content; }
-    }
-    
-    @else if $canvas == desktop-neg {
-         @media only screen and (max-width: $desktop - 1 ) { @content; }
-    }
-    
-    @else if $canvas == desktop-large-neg {
-         @media only screen and (max-width: $desktop-large - 1 ) { @content; }
-    }
-    
-    // alles größer als...
-    
-    @else if $canvas == mobile-p-pos {
-         @media only screen and (min-width: $mobile-ls) { @content; }
-    }
-    
-    @else if $canvas == mobile-ls-pos {
-         @media only screen and (min-width: $mobile-ls ) { @content; }
-    }
-    
-    @else if $canvas == tablet-p-pos {
-         @media only screen and (min-width: $tablet-p ) { @content; }
-    }
-    
-    @else if $canvas == desktop-pos {
-         @media only screen and (min-width: $desktop ) { @content; }
-    }
-    
-    @else if $canvas == desktop-large-pos {
-         @media only screen and (min-width: $desktop-large ) { @content; }
-    }
-}
+   
+ 

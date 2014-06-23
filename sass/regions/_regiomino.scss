@@ -1,8 +1,34 @@
 #regiomino {
     
-    .column-wrapper .columns {
-        margin: 0 20px;
+    .column-wrapper {
+        padding-top: 66px ;
+    
+    @include bp(1030px) {
+        padding-top: 16px;
     }
+    text-align: center;
+}
+    
+    .column-wrapper .columns {
+        margin: 0 2.08%;
+        
+        &.five {
+            @include bp(1030px) {
+        width: 100%;
+        display:    block;
+        float: none;
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+        }
+       
+    }
+    
+    @include bp(1030px) {
+            .columns {
+                float: none;
+            }
+        }
     
     .column-wrapper h2 {
         font-size: 28px;
@@ -17,6 +43,9 @@
         padding: 16px 0 0;
         color: $paragraph-black;
         line-height: 21px;
+        @include bp(1030px) {
+        text-align: left;
+    }
     }
     
     .service-icon .circle.outer {

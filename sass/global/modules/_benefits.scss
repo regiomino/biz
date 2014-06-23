@@ -1,48 +1,49 @@
 .benefits-wrapper {
-    padding: 40px 0 56px;
+    padding-top: 40px;
     position: relative;
-    min-height: 730px;
     
     .benefits-visual {
         position: absolute;
         z-index: 0;
         top: auto;
+        width: 62.5%;
+        
+        img {
+            max-width: 100%;
+            height: auto !important;
+            display: block;
+        }
         
         .large {
-            width: 600px;
-            height: 400px;
-            background-color : #acacac;
+             width: 100%;
             margin-bottom: 10px;
         }
         
         .small {
-            width: 197px;
-            height: 130px;
-            background-color : red;
+            width: 33%;
             float: left;
             margin-right: 10px;
         }
         
         .medium {
-            width: 300px;
-            height:200px;
-            background-color : green;
+            width: 50%;
             float: left;
         }
     }
 
     .benefits-items {
-        margin-top : 50px;
+        margin-top : 5.29%;
         position: relative;
         z-index: 10;
         
         .item-wrapper {
+            @include box-sizing (border-box);
             padding-top: 20px;
-            padding-left:40px;
+            padding-left:8.69%;
             padding-bottom: 40px;
             background: #ffffff;
             position: relative;
-            min-height: 500px;
+            min-height: 560px;
             
             &:before {
                 content: "";

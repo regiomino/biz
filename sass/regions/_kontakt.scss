@@ -2,11 +2,15 @@
     
     .form-wrapper,
     .contact-info {
-        padding: 94px 0 70px;
+        padding: 40px 0 0px;
     }
     
     .form-wrapper {
         
+        width: 42.5%;
+        @include bp(1217px) {
+            width: 67.5%;
+        }
         .formrow {
             position: relative;
             
@@ -15,7 +19,7 @@
             input[type="email"],
             textarea {
                 font-family: 'Roboto', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-                width: 366px;
+                width: 100%;
 		max-width: 100%;
                 display: block;
                 color: $paragraph-black;
@@ -23,6 +27,7 @@
                 border:1px solid $separator-grey;
 		padding: 25px 20px;
                 background: $white;
+                @include box-sizing (border-box);
                 margin-bottom: 5px;
                 @include border-radius(2px);
                 @include transition(all .3s linear);
@@ -90,12 +95,39 @@
     }
     
     .contact-info {
-       
-        width: 508px;
+        @include box-sizing (border-box);
+        width: 57.5%;
+        padding-left: 1.041%;
+        
+        @include bp(1217px) {
+            width: 31.5%;
+        }
+        
+        .half-width,
+        .full-width {
+            padding-left: 3.69%;
+            padding-right: 3.69%;
+            @include box-sizing (border-box);
+        }
+        
+        .half-width {
+            &.last{
+                padding-right: 0;
+            }
+            
+            @include bp(1217px) {
+                width: 100%;
+                float: none;
+                margin-bottom: 20px;
+            }
+        }
         
         p {
             margin-top: 0;
             margin-bottom: 30px;
+            @include bp(1217px) {
+            margin-bottom: 14px;
+            }
         }
         
         .address-row {
@@ -188,14 +220,9 @@
         }
         
         .contact-footer {
-            padding: 66px 0;
-            
-            img {
-                float: left;
-            }
             
             p {
-                padding: 17px 0 0 128px;
+                padding: 0;
             }
         }
     }

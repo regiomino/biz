@@ -183,6 +183,8 @@
                 forceHeight : false,
                 easing: 'outCubic'
     });
+        
+    $('#parallax2 .quote-wrapper').quovolver();
 	 
     
 })(jQuery, window);

@@ -5,6 +5,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment:fixed;
+    .mobile & {
+        background-attachment: inherit;
+    }
     overflow: hidden;
     position: relative;
     z-index: 10;

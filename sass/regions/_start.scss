@@ -5,22 +5,34 @@
     -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
+    .mobile & {
+        background-attachment: inherit;
+    }
     position: relative;
     overflow: hidden;
     
     h1.well-hello {
         color: #FFF;
-        margin-top: 0;
-        margin-bottom: 0;
+         
         font-size: 100px;
         font-weight: 700;
         line-height: 90px;
          position: fixed;
          width: 781px;
+         height: 270px;
          left:50%;
+         font-family: 'Dosis';
          margin-left: -259px;
-         margin-top: -12%;
+         margin-top: -135px;
          top: 50%;
+         
+        .mobile & {
+            position: relative;
+            margin: 0px auto 0px auto;
+            left: auto;
+            width: auto;
+            top: 100px;
+        }
          
          @include bp(1089px) {
            font-size: 70px;

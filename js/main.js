@@ -1,13 +1,12 @@
 (function($,win) {
     
+    if( isMobile() ) {
+        $('html').addClass('mobile');
+    }
+        
     var $startSection = $('#start'),
         $navigation = $('ul.nav');
-        
-    $(win).on('scroll', function(){
-        var scrollTop = $(win).scrollTop();
-        console.info(scrollTop);
-       
-    });
+   
     //Stage Resize
     
     $(win).on('resize.stage', function(){
@@ -43,25 +42,23 @@
     
     //Start Loading
     
-    if ( Modernizr.csstransitions ) {
-	var im = $('img').length;
-	var g = 0;
-	$('img').each( function() {
-             
-		"use strict";
-		$(this).imagesLoaded( function() {
-			g++;
-                        var z = (g * 100) /im;
-			$('#progressbar').animate({ width : z+'%' },100, function() {
-				if ( $(this).width() >= $(win).width() ) {
-					$('#progressbar, .fill').addClass('hide');
-					// all images loaded
-					$('#preload').fadeOut( 1200 );
-				}
-			});
-		});
-	});
-    }
+    var im = $('img').length;
+    var g = 0;
+    $('img').each( function() {
+         
+            "use strict";
+            $(this).imagesLoaded( function() {
+                    g++;
+                    var z = (g * 100) /im;
+                    $('#progressbar').animate({ width : z+'%' },100, function() {
+                            if ( $(this).width() >= $(win).width() ) {
+                                    $('#progressbar, .fill').addClass('hide');
+                                    // all images loaded
+                                    $('#preload').fadeOut( 1200 );
+                            }
+                    });
+            });
+    });
     
     //About us Carousel
     
@@ -134,6 +131,17 @@
         return re.test(email);
     }
     
+    function isMobile() {
+        
+        if ( (/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera) ) {
+            return true;
+        }
+        
+        else {
+            return false;
+        }
+    }
+    
      //Kontakt
      
      $('.form-wrapper input[type="submit"].button').click( function(e) {
@@ -165,24 +173,27 @@
 				th.parent().find('.loader').removeClass('active');
 			}
     });
+     if(  !isMobile() ) {
+        $('html').niceScroll({
+            cursorcolor:"#95BC0D",
+            background: "#111111",
+            cursorborder:"#95BC0D",
+            cursoropacitymin : 1,
+            cursorwidth : 20,
+            cursorborderradius :0,
+            zindex : '1000'
+        });
+     }
     
-    $('html').niceScroll({
-		cursorcolor:"#95BC0D",
-		background: "#111111",
-		cursorborder:"#95BC0D",
-		cursoropacitymin : 1,
-		cursorwidth : 20,
-		cursorborderradius :0,
-                zindex : '1000'
-	});
-    
-    
-    $('body').wrapInner('<div id="skrollr-body" />');
-        var s = skrollr.init({
-                // edgeStrategy: 'set',
-                forceHeight : false,
-                easing: 'outCubic'
-    });
+    if( !isMobile() ) {
+        $('body').wrapInner('<div id="skrollr-body" />');
+            var s = skrollr.init({
+                    // edgeStrategy: 'set',
+                    forceHeight : false,
+                    easing: 'outCubic'
+        });
+    }
+        
         
     $('#parallax2 .quote-wrapper').quovolver();
 	 

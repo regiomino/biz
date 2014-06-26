@@ -1,12 +1,18 @@
 .benefits-wrapper {
     padding-top: 40px;
     position: relative;
+    @include bpm(767px) {
+                    padding-top: 0px;
+                }
     
     .benefits-visual {
         position: absolute;
         z-index: 0;
         top: auto;
         width: 62.5%;
+        @include bpm(767px) {
+            display: none;
+        }
         
         img {
             max-width: 100%;
@@ -33,6 +39,9 @@
 
     .benefits-items {
         margin-top : 5.29%;
+        @include bpm(767px) {
+                   margin-top: 0;
+                }
         position: relative;
         z-index: 10;
         
@@ -45,10 +54,18 @@
             @include bp(900px) {
                 opacity: 0.9;
             }
+            @include bp(767px) {
+                width: 230px;
+            }
+            
             position: relative;
             min-height: 560px;
-            @include bp(900px) {
-                min-height: 0px;
+            
+            @include bpm(767px) {
+                padding-left:0px;
+                 padding-top: 0px;
+                 padding-bottom: 0px;
+                 min-height: 1px;
             }
             
             &:before {
@@ -60,12 +77,18 @@
                 height: auto;
                 top: 0px;
                 z-index: -1;
+                 @include bpm(767px) {
+                    display: none;
+                }
                 bottom: 10px;
             }
             
             &:after {
                 content: "";
                 display: block;
+                @include bpm(767px) {
+                display: none;
+            }
                 height: auto;
                 position: absolute;
                 width: 100px;
@@ -86,6 +109,9 @@
                 color: #95BC0D;
                 position: absolute;
                 left: -8px;
+                @include bpm(767px) {
+                left: 0px;
+            }
                 top: 3px;
             }
             
@@ -202,7 +228,9 @@
             .item-wrapper {
                 padding-left: 0;
                 padding-right: 40px;
-                
+                @include bpm(767px) {
+                   padding-right: 0px;
+                }
                 &:before {
                     @include box-shadow(rgba($black, 0.1) 4px 5px 4px 0px );
                     left: auto;
@@ -212,6 +240,7 @@
                 &:after {
                     left: auto;
                     right: -10px;
+                    
                 }
                 
                 .benefit {
@@ -220,6 +249,9 @@
                     
                     &:before  {
                         right: -8px;
+                        @include bpm(767px) {
+                        right: 0px;
+                    }
                         left: auto;
                     }   
                 }

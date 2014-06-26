@@ -3,6 +3,10 @@
     .form-wrapper,
     .contact-info {
         padding: 40px 0 0px;
+        
+        @include bpm(767px) {
+             padding: 0px 0 0px;
+        }
     }
     
     .form-wrapper {
@@ -10,6 +14,10 @@
         width: 42.5%;
         @include bp(1217px) {
             width: 67.5%;
+        }
+        @include bpm(767px) {
+            width: 100%;
+            margin-bottom: 20px;
         }
         .formrow {
             position: relative;
@@ -103,11 +111,22 @@
             width: 31.5%;
         }
         
+        @include bpm(767px) {
+            width: 100%;
+             
+        }
+        
         .half-width,
         .full-width {
             padding-left: 3.69%;
             padding-right: 3.69%;
             @include box-sizing (border-box);
+            
+            @include bpm(767px) {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
         
         .half-width {
@@ -126,7 +145,13 @@
             margin-top: 0;
             margin-bottom: 40px;
             @include bp(1217px) {
-            margin-bottom: 14px;
+             margin-bottom: 14px;
+            }
+            
+            &.copyright { 
+                @include bpm(767px) {
+                   margin-bottom: 0px;
+               }
             }
         }
         
@@ -165,7 +190,7 @@
             @include bp(952px) {
                 font-size: 16px;
             }
-
+            
             font-weight: 700;
             margin-top: 0;
             color: $paragraph-black;

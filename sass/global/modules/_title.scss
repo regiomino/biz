@@ -11,6 +11,12 @@
         @include bp(900px) {
             font-size:   50px;
         }
+        @include bpm(767px) {
+            padding-top: 10px;
+            font-size:   34px;
+            margin: 0 0 15px 0;
+            line-height: 30px;
+        }
 
 h1 {
     font-size: 60px;	
@@ -27,6 +33,7 @@ h1 {
               font-size: 16px;
               line-height: 20px;
             color: $heading-black;
+            
         }
     }
 }

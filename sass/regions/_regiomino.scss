@@ -6,6 +6,10 @@
     @include bp(1030px) {
         padding-top: 16px;
     }
+    
+     @include bpm(767px) {
+                padding-top: 15px;
+            }
     text-align: center;
 }
     
@@ -13,13 +17,22 @@
         margin: 0 2.08%;
         
         &.five {
+            width: 29%;
             @include bp(1030px) {
-        width: 100%;
-        display:    block;
-        float: none;
-        margin-left: 0;
-        margin-bottom: 40px;
-    }
+                width: 100%;
+                display:    block;
+                float: none;
+                margin-left: 0;
+                margin-bottom: 40px;
+            }
+            
+            @include bpm(767px) {
+                width: 100%;
+                display:    block;
+                float: none;
+                margin-left: 0;
+                margin-bottom: 40px;
+            }
         }
        
     }
@@ -35,6 +48,11 @@
         @include bp(900px) {
            font-size: 23px;
         }
+        
+        @include bpm(767px) {
+            font-size: 23px;
+            padding: 15px 0 0 0;
+        }
         line-height: 28px;
         font-weight: bold;
         padding: 32px 0 0 0;
@@ -47,8 +65,15 @@
         color: $paragraph-black;
         line-height: 21px;
         @include bp(1030px) {
-        text-align: left;
-    }
+            text-align: left;
+        }
+        
+        @include bpm(767px) {
+            
+            padding: 0;
+        }
+        
+        
     }
     
     .service-icon .circle.outer {
@@ -56,10 +81,16 @@
         border-style: solid;
         width: 90px;
         height: 90px;
-         @include bp(900px) {
+        @include bp(900px) {
             width: 67px;
-        height: 67px;
+            height: 67px;
         }
+        
+         @include bpm(767px) {
+            width: 40px;
+            height: 40px;
+        }
+        
         margin: 0 auto;
         overflow: hidden;
         padding: 5px;
@@ -103,6 +134,12 @@
                 font-size: 30px;
                 margin-left: -15px;
                 margin-top: -15px;
+            }
+            
+            @include bpm(767px) {
+                font-size: 26px;
+                margin-left: -13px;
+                margin-top: -13px;
             }
             position: absolute;
             left: 50%;

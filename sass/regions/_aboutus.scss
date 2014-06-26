@@ -2,6 +2,9 @@
     
     .aboutus-wrapper {
         padding: 40px 0 56px;
+        @include bpm(767px) {
+                padding: 0px;
+            }
         
         .aboutus-buttons {
             width: 35px;

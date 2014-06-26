@@ -36,7 +36,8 @@ a {
     @include bpm(767px) {
             padding-top: 58px;
             @include box-shadow(none);
-            padding-bottom: 0px;
+            padding-bottom: 20px;
+            border: 1px solid #EEE;
         }
 }
 
@@ -96,6 +97,9 @@ h5 {
     line-height: 0;
     display: inline-block;
     background: #CACACA;
+    @include bpm(767px) {
+           display: none;
+        }
 }
 
 .circle {
@@ -110,6 +114,9 @@ h5 {
     border-width: 1px;
     border-style: solid;
     border-color: #CACACA;
+    @include bpm(767px) {
+           display: none;
+        }
     background: #FFFFFF;
 }
 

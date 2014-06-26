@@ -20,11 +20,18 @@
 
 
  
-
+$mobile : 768px;
+ 
 
 @mixin bp($size) {
      
-    @media only screen and (max-width: $size) { @content; }
+    @media only screen and (min-width: $mobile) and (max-width: $size) { @content; }
+}
+
+
+@mixin bpm($size) {
+     
+    @media only screen and (min-width: 0) and (max-width: $size) { @content; }
 }
     
    

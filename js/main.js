@@ -18,6 +18,13 @@
        
     }).resize();
     
+    
+    // Mobile Navigation onChange
+    
+    $(".nav-mobile select").change(function() {
+        window.location = $(this).find("option:selected").val();
+    });
+    
     //Waypoints
     
     $('.menuitem').waypoint(function(direction) {

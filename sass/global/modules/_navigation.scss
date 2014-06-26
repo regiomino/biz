@@ -2,16 +2,77 @@
 
 .navbar {
     width: 260px;
+    @include bp(900px) {
+            width: 230px;
+        }
     height: 82px;
-    padding-top: 105px;
     top: 0;
     left: 0;
+    overflow: auto;
     height: 100%;
     background: url('../images/txture.png');
+    @include bpm(767px) {
+        background: rgba(0,0,0,0.9);
+        @include box-shadow(rgba($black, 0.3) 0 3px 4px 0 );
+    }
     z-index: 1000;
     @include box-sizing (border-box);
     @include box-shadow(rgba($black, 0.35) -28px 0px 22px -20px inset);
+    
+    @include bpm(767px) {
+        height: 58px;
+        overflow: hidden;
+        width: 100%;
+        
+        .nav-items {
+            display: none;
+        }
+    }
    
+    .nav-mobile {
+        display: none;
+        
+        @include bpm(767px) {
+            display: block ;
+            float: right;
+            margin-right: 2%;
+            margin-top: 18px;
+        }
+        
+    }
+    
+    
+    .logo-wrapper {
+        margin-bottom: 32px;
+        margin-top: 30px;
+        padding-left: 25px;
+        @include bpm(767px) {
+            margin-top: 12px;
+            margin-bottom: 0px;
+            float: left;
+            padding-left: 2%;
+        }
+    }
+
+    .logo {
+        width:150px;
+        display: block;
+        @include bpm(767px) {
+            width: 100px;
+            height: 40px;
+        }  
+        height:50px;
+        display: inline-block;
+        background: url(../images/logo.svg) no-repeat top left;
+        background-size: contain;
+        
+        .no-svg &,
+        .no-js & {
+            width:150px;
+            height:54px;
+            background-image: url(../images/logo.png);
+        }
+    }
     
     ul.nav {
         padding: 0px;

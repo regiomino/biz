@@ -23,22 +23,21 @@
     .container .five.columns                    { width: 29.12% }
     .container .six.columns                     { width: 340px; }
     .container .seven.columns                   { width: 400px; }
-    .container .eight.columns                   { width: 47.92%; }
-    .container .nine.columns                    { width: 520px; }
-    .container .ten.columns                     { width: 580px; }
-    .container .eleven.columns                  { width: 640px; }
-    .container .twelve.columns                  { width: 700px; }
-    .container .thirteen.columns                { width: 760px; }
-    .container .fourteen.columns                { width: 820px; }
-    .container .fifteen.columns                 { width: 880px; }
-    .container .sixteen.columns                 { width: 940px; }
-
-    .container .one-third.column                { width: 300px; }
-    .container .two-thirds.column               { width: 620px; }
+    .container .eight.columns                   { width: 47.92%;
+    
+    @include bp(900px) {
+               width: 68%;
+            }}
+   
 
     /* Offsets */
    
-    .container .offset-by-eight                 { padding-left: 50%; }
+    .container .offset-by-eight                 {
+        padding-left: 50%;
+        @include bp(900px) {
+           padding-left: 30%;
+        }
+    }
    
 
 

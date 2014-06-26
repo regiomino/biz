@@ -1,6 +1,9 @@
 
 .image-holder {
     height: 440px;
+    @include bp(900px) {
+        height: 270px;
+    }
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,13 +27,17 @@
                 color: $white;
             }
     }
+    
+     @include bpm(767px) {
+        display: none;
+    }
 }
 
 #parallax1 {
     background-image: url('../images/parallax/1.jpg');
     
      .parallax-content {
-        @include bp(1263px) {
+        @include bp(1282px) {
             padding-top: 0px;
         }
      }
@@ -46,16 +53,26 @@
             display: block;
             width: 190px;
             height: 109px;
+            @include bp(1030px) {
+                width: auto;
+                height: auto;
+            }
+            @include bp(900px) {
+                line-height: 78px;
+            }
             line-height: 109px;
             text-align: center;
             background-color: #FFF;
             opacity: 0.7;
             margin-right: 10px;
             margin-bottom: 10px;
-            
+            @include bp(1030px) {
+                opacity: 1;
+                 background: none;;
+            }
+                
             img {
                 vertical-align: middle;
-                 
             }
         }
     }
@@ -70,12 +87,18 @@
             font-family: 'Dosis';
             color: $white;
             font-size: 46px;
+            @include bp(900px) {
+                font-size: 23px;
+            }
             font-weight: 700;
             
             
             .author {
                 display: block;
                 font-size:20px;
+                @include bp(900px) {
+                    font-size: 14px;
+                }
                 text-transform: uppercase;
             }
             

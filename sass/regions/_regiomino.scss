@@ -32,6 +32,9 @@
     
     .column-wrapper h2 {
         font-size: 28px;
+        @include bp(900px) {
+           font-size: 23px;
+        }
         line-height: 28px;
         font-weight: bold;
         padding: 32px 0 0 0;
@@ -53,6 +56,10 @@
         border-style: solid;
         width: 90px;
         height: 90px;
+         @include bp(900px) {
+            width: 67px;
+        height: 67px;
+        }
         margin: 0 auto;
         overflow: hidden;
         padding: 5px;
@@ -92,6 +99,11 @@
             font-size: 20px;
             color: $heading-black;
             font-size: 34px;
+            @include bp(900px) {
+                font-size: 30px;
+                margin-left: -15px;
+                margin-top: -15px;
+            }
             position: absolute;
             left: 50%;
             top: 50%;

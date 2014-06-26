@@ -11,6 +11,10 @@
     position: relative;
     overflow: hidden;
     
+    @include bpm(767px) {
+        display: none;
+    }
+    
     h1.well-hello {
         color: #FFF;
          
@@ -21,6 +25,9 @@
          width: 781px;
          height: 270px;
          left:50%;
+          @include bp(900px) {
+            left:47%;
+          }
          font-family: 'Dosis';
          margin-left: -259px;
          margin-top: -135px;

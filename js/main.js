@@ -1,5 +1,14 @@
 (function($,win) {
     
+    $.fn.viewport =function () {
+    var e = window, a = 'inner';
+    if (!('innerWidth' in window )) {
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+}
+    
     if( isMobile() ) {
         $('html').addClass('mobile');
     }
@@ -18,6 +27,15 @@
        
     }).resize();
     
+    
+    /*$(win).on('resize.map', function(){
+       
+       var $mapContainer = $('#parallax1'),
+            $map = $('#map');
+            adjustImageSize ( $map,$mapContainer);
+      
+       
+    }).resize();*/
     
     // Mobile Navigation onChange
     
@@ -48,6 +66,10 @@
     },{ offset: function() { var r = $(this).height() + 70;return '-'+r; } });
     
     //Start Loading
+    var vp = $.fn.viewport();
+    
+    if( vp.width >= 768 ) {
+       
     
     var im = $('img').length;
     var g = 0;
@@ -66,6 +88,9 @@
                     });
             });
     });
+} else {
+    $('#preload').fadeOut(1400);
+}
     
     //About us Carousel
     
@@ -130,7 +155,36 @@
                         return false;
                 }
         } 
-    }	 
+    }
+    
+   function adjustImageSize($img,$container) {
+			var w_w = $container.width(),
+                            w_h = $container.height(),
+                            r_w = w_h / w_w,
+                            i_w = $img.width(),
+                            i_h = $img.height(),
+                            r_i = i_h / i_w,
+                            new_w,
+                            new_h,
+                            new_left,
+                            new_top;
+
+			if (r_w > r_i) {
+				new_h = w_h;
+				new_w = w_h / r_i;
+			} else {
+				new_h = w_w * r_i;
+				new_w = w_w;
+			}
+
+			$img.css({
+				width : (new_w) + 'px',
+				height : (new_h) + 'px',
+				marginLeft : (w_w - new_w) / 2 + 'px',
+                                marginTop : (w_h - new_h) / 2 + 'px'
+			});
+
+		}
      
      
     function validateEmail(email) { 
@@ -191,18 +245,43 @@
             zindex : '1000'
         });
      }
+     
+     if(  !isMobile() ) {
+        $('a.tt').tooltipster();
+     }
     
     if( !isMobile() ) {
         $('body').wrapInner('<div id="skrollr-body" />');
             var s = skrollr.init({
                     // edgeStrategy: 'set',
                     forceHeight : false,
-                    easing: 'outCubic'
+                     easing : 'swing',
+                    smoothScrolling: true,
+                    smoothScrollingDuration:250
         });
     }
         
         
-    $('#parallax2 .quote-wrapper').quovolver();
+    
+    
+    
+    
+    //royalslider
+    
+     var rsi = $('#slider-in-laptop').royalSlider({
+        autoHeight: false,
+        arrowsNav: false,
+        imageScaleMode: 'fill',
+        imageAlignCenter: true,
+        autoScaleSlider: true,  
+        autoScaleSliderWidth: 486,     
+        autoScaleSliderHeight: 315,
+        video : { 
+            youTubeCode : '<iframe src="https://www.youtube.com/embed/%id%?rel=0&autoplay=1&showinfo=0" frameborder="no"></iframe>'
+        }
+         
+
+    }).data('royalSlider');
 	 
     
 })(jQuery, window);

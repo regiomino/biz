@@ -128,3 +128,108 @@ h5 {
     border-style: inset;
 }
 
+// Button
+.button-wrapper { 
+    position: relative;
+    margin-top: 20px;
+    display: inline-block;
+    input.button,
+    a.button {
+        @include sassy-button("simple", 4px, 13px, $green-button-gradient-start, $green-button-gradient-end, $button-white, "none");
+            font-weight: 700;
+            font-size: 16px;
+            @include text-shadow($green-button-text-shadow 1px 1px 0);
+            outline: none;
+        }
+        
+    &:before {
+        font-family: 'biz-icons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        @include text-shadow($green-button-text-shadow 1px 1px 0);
+        color: $button-white;
+    }
+    
+    &.send:before {
+        content: '\f1d8';
+        font-size: 19px;
+        left: 15px;
+        top: 11px;
+    }
+    
+    &.action:before {
+        content: '\e60a';
+        font-size: 19px;
+        left: 15px;
+        top: 15px;
+    }
+}
+
+// Link
+
+a.ext {
+   color : #95BC0D;
+   position: relative;
+   padding-right: 11px;
+   
+    &:after {
+        font-family: 'biz-icons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+       right: 3px;
+top: 3px;
+font-size: 11px;
+        content: "\e60b";
+    }
+    
+
+    
+}
+
+//slider buttons
+
+    .slider-buttons {
+        width: 35px;
+        height: 35px;
+        display: block;
+        margin: 0 26px;
+        border: 2px solid #B3B3B3;
+        @include border-radius(50px);
+        position: relative;
+        
+        &:after {
+            font-family: 'biz-icons';
+            font-size: 24px;
+            color: #B3B3B3;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -12px;
+            margin-top: -12px;
+        }
+        
+        &.prev:after {
+            content: "\e60a";
+        }
+        
+        &.next:after {
+            content: "\e60b";
+            margin-left: -11px;
+        }
+        
+    }
+  

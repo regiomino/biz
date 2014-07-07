@@ -25,7 +25,8 @@ $mail->Password = "5j6M9NajRE56Jqb2C-45eQ";							 // SMTP password
 
 
 $mail->From     = "support@regiomino.de";				 // SMTP username
-$mail->AddAddress("support@regiomino.de");			  	 // Your Adress
+//$mail->AddAddress("support@regiomino.de");
+$mail->AddAddress("julian.scheele@regiomino.de");// Your Adress
 $mail->Subject  =  "regiomino.biz Kontaktformularanfrage!";
 $mail->IsHTML(true);  
 $mail->CharSet = 'UTF-8';

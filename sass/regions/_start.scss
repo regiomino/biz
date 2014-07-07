@@ -104,6 +104,14 @@
             
             &:before {
                 font-family: 'biz-icons';
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
                 font-size: 44px;
                 color: $brand-green;
                 content: "\e60c";
@@ -112,8 +120,8 @@
                 height: 44px;
                 left: 50%;
                 top: 50%;
-                margin-left: -21px;
-                margin-top: -19px;
+                margin-left: -22px;
+                margin-top: -20px;
             }
         }
     }

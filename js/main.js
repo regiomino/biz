@@ -92,42 +92,11 @@
     $('#preload').fadeOut(1400);
 }
     
-    //About us Carousel
-    
-    var taracarousel = $('.aboutus-slider ul').bxSlider({
-        minSlides: 1,
-        maxSlides: 4,
-        controls: false,
-        slideWidth: 215,
-        pager: false,
-        easing: 'linear',
-        responsive: true,
-        slideMargin: 16
-    });
-    
-    $('.aboutus-buttons.next').click( function(event) {
-        if(event.preventDefault){
-            event.preventDefault();
-        }
-        else {
-            event.returnValue = false;
-        }
-        taracarousel.goToNextSlide();
-    });
-    
-     $('.aboutus-buttons.prev').click( function(event) {
-        if(event.preventDefault){
-            event.preventDefault();
-        }
-        else {
-            event.returnValue = false;
-        }
-        taracarousel.goToPrevSlide();
-    });
+   
      
     function validateValue(ci) { 
         var v = ci.val();
-        console.info(v.length);
+         
          
         var iv = ci.attr('title');
         if ( ci.attr('type') === 'email' ) {
@@ -157,34 +126,7 @@
         } 
     }
     
-   function adjustImageSize($img,$container) {
-			var w_w = $container.width(),
-                            w_h = $container.height(),
-                            r_w = w_h / w_w,
-                            i_w = $img.width(),
-                            i_h = $img.height(),
-                            r_i = i_h / i_w,
-                            new_w,
-                            new_h,
-                            new_left,
-                            new_top;
-
-			if (r_w > r_i) {
-				new_h = w_h;
-				new_w = w_h / r_i;
-			} else {
-				new_h = w_w * r_i;
-				new_w = w_w;
-			}
-
-			$img.css({
-				width : (new_w) + 'px',
-				height : (new_h) + 'px',
-				marginLeft : (w_w - new_w) / 2 + 'px',
-                                marginTop : (w_h - new_h) / 2 + 'px'
-			});
-
-		}
+   
      
      
     function validateEmail(email) { 
@@ -210,10 +152,10 @@
 			e.preventDefault();
 			$(this).parent().find('.loader').addClass('active');
 			var th = $(this);
-			var yn = $(this).parent().parent().find('input[name="yourname"]').val();
-			var em = $(this).parent().parent().find('input[name="email"]').val();
-			var ta = $(this).parent().parent().find('textarea[name="message"]').val();
-			if ( validateValue($(this).parent().parent().find('input[name="yourname"]')) && validateValue($(this).parent().parent().find('input[name="email"]')) && validateValue($(this).parent().parent().find('textarea[name="message"]')) ) {
+			var yn = $(this).parent().parent().parent().find('input[name="yourname"]').val();
+			var em = $(this).parent().parent().parent().find('input[name="email"]').val();
+			var ta = $(this).parent().parent().parent().find('textarea[name="message"]').val();
+			if ( validateValue($(this).parent().parent().parent().find('input[name="yourname"]')) && validateValue($(this).parent().parent().find('input[name="email"]')) && validateValue($(this).parent().parent().find('textarea[name="message"]')) ) {
 				$.ajax({
 					url : 'email.php',
 					type : 'post',

@@ -1,11 +1,11 @@
 /*
 Syntax error: Undefined mixin 'border-radius'.
-        on line 393 of /var/biz/sass/vendor/royalslider/rs-default-inverted.scss, in `border-radius'
-        from line 393 of /var/biz/sass/vendor/royalslider/rs-default-inverted.scss
+        on line 101 of /var/biz/sass/vendor/royalslider/rs-default-inverted.scss, in `border-radius'
+        from line 101 of /var/biz/sass/vendor/royalslider/rs-default-inverted.scss
 
 Backtrace:
-/var/biz/sass/vendor/royalslider/rs-default-inverted.scss:393:in `border-radius'
-/var/biz/sass/vendor/royalslider/rs-default-inverted.scss:393
+/var/biz/sass/vendor/royalslider/rs-default-inverted.scss:101:in `border-radius'
+/var/biz/sass/vendor/royalslider/rs-default-inverted.scss:101
 /var/lib/gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/perform.rb:253:in `visit_mixin'
 /var/lib/gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `send'
 /var/lib/gems/1.8/gems/sass-3.2.19/lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
@@ -79,4 +79,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined mixin 'border-radius'.\A         on line 393 of /var/biz/sass/vendor/royalslider/rs-default-inverted.scss, in `border-radius'\A         from line 393 of /var/biz/sass/vendor/royalslider/rs-default-inverted.scss"; }
+  content: "Syntax error: Undefined mixin 'border-radius'.\A         on line 101 of /var/biz/sass/vendor/royalslider/rs-default-inverted.scss, in `border-radius'\A         from line 101 of /var/biz/sass/vendor/royalslider/rs-default-inverted.scss"; }

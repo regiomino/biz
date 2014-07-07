@@ -148,14 +148,15 @@
      //Kontakt
      
      $('.form-wrapper input[type="submit"].button').click( function(e) {
-        
 			e.preventDefault();
+                        var $form = $(this).parents('.contact-form');
+                        
 			$(this).parent().find('.loader').addClass('active');
 			var th = $(this);
-			var yn = $(this).parent().parent().parent().find('input[name="yourname"]').val();
-			var em = $(this).parent().parent().parent().find('input[name="email"]').val();
-			var ta = $(this).parent().parent().parent().find('textarea[name="message"]').val();
-			if ( validateValue($(this).parent().parent().parent().find('input[name="yourname"]')) && validateValue($(this).parent().parent().find('input[name="email"]')) && validateValue($(this).parent().parent().find('textarea[name="message"]')) ) {
+			var yn = $form.find('input[name="yourname"]').val();
+			var em = $form.find('input[name="email"]').val();
+			var ta = $form.find('textarea[name="message"]').val();
+			if ( validateValue($form.find('input[name="yourname"]')) && validateValue($form.find('input[name="email"]')) && validateValue($form.find('textarea[name="message"]')) ) {
 				$.ajax({
 					url : 'email.php',
 					type : 'post',

@@ -28,15 +28,6 @@
     }).resize();
     
     
-    /*$(win).on('resize.map', function(){
-       
-       var $mapContainer = $('#parallax1'),
-            $map = $('#map');
-            adjustImageSize ( $map,$mapContainer);
-      
-       
-    }).resize();*/
-    
     // Mobile Navigation onChange
     
     $(".nav-mobile select").change(function() {
@@ -204,8 +195,25 @@
         });
     }
         
+    if( !isMobile() ) {    
+     $('a[href*=#]:not([href=#])').click(function() {
         
-    
+            var target = $(this.hash),
+                hash = this.hash;
+            
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                      scrollTop: target.offset().top
+                    }, 800, function(){
+                        location.hash = hash;
+                        });
+                    return false;
+                }
+        
+        });
+    }
+ 
     
     
     

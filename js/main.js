@@ -69,7 +69,7 @@
             "use strict";
             $(this).imagesLoaded( function() {
                     g++;
-                    var z = (g * 100) / (im/5);
+                    var z = (g * 100) / (im/3);
                     $('#progressbar').animate({ width : z+'%' },100, function() {
                             if ( $(this).width() >= $(win).width() ) {
                                     $('#progressbar, .fill').addClass('hide');
